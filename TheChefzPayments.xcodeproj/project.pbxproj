@@ -1,0 +1,676 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		147FAD6E258824114CC83357 /* Pods_TheChefzPayments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D64459C86B4722E0CB3CC2 /* Pods_TheChefzPayments.framework */; };
+		4A7B010D2876F023009302E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7B010C2876F023009302E7 /* AppDelegate.swift */; };
+		4A7B01112876F023009302E7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7B01102876F023009302E7 /* ViewController.swift */; };
+		4A7B01142876F023009302E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A7B01122876F023009302E7 /* Main.storyboard */; };
+		4A7B01162876F025009302E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A7B01152876F025009302E7 /* Assets.xcassets */; };
+		4A7B01192876F025009302E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A7B01172876F025009302E7 /* LaunchScreen.storyboard */; };
+		4A7B01242876F025009302E7 /* TheChefzPaymentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7B01232876F025009302E7 /* TheChefzPaymentsTests.swift */; };
+		4A7B012E2876F025009302E7 /* TheChefzPaymentsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7B012D2876F025009302E7 /* TheChefzPaymentsUITests.swift */; };
+		4A7B01302876F025009302E7 /* TheChefzPaymentsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7B012F2876F025009302E7 /* TheChefzPaymentsUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4A7B01202876F025009302E7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4A7B01012876F023009302E7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4A7B01082876F023009302E7;
+			remoteInfo = TheChefzPayments;
+		};
+		4A7B012A2876F025009302E7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4A7B01012876F023009302E7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4A7B01082876F023009302E7;
+			remoteInfo = TheChefzPayments;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		47C0D736792A22C81C9A3AAD /* Pods-TheChefzPayments.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheChefzPayments.release.xcconfig"; path = "Target Support Files/Pods-TheChefzPayments/Pods-TheChefzPayments.release.xcconfig"; sourceTree = "<group>"; };
+		4A7B01092876F023009302E7 /* TheChefzPayments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheChefzPayments.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A7B010C2876F023009302E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4A7B01102876F023009302E7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4A7B01132876F023009302E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4A7B01152876F025009302E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4A7B01182876F025009302E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4A7B011A2876F025009302E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A7B011F2876F025009302E7 /* TheChefzPaymentsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheChefzPaymentsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A7B01232876F025009302E7 /* TheChefzPaymentsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheChefzPaymentsTests.swift; sourceTree = "<group>"; };
+		4A7B01292876F025009302E7 /* TheChefzPaymentsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheChefzPaymentsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A7B012D2876F025009302E7 /* TheChefzPaymentsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheChefzPaymentsUITests.swift; sourceTree = "<group>"; };
+		4A7B012F2876F025009302E7 /* TheChefzPaymentsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheChefzPaymentsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4E5F2D06BAA14D3FA29D3AEA /* Pods-TheChefzPayments.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheChefzPayments.debug.xcconfig"; path = "Target Support Files/Pods-TheChefzPayments/Pods-TheChefzPayments.debug.xcconfig"; sourceTree = "<group>"; };
+		52D64459C86B4722E0CB3CC2 /* Pods_TheChefzPayments.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheChefzPayments.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4A7B01062876F023009302E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				147FAD6E258824114CC83357 /* Pods_TheChefzPayments.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A7B011C2876F025009302E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A7B01262876F025009302E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4A7B01002876F023009302E7 = {
+			isa = PBXGroup;
+			children = (
+				4A7B010B2876F023009302E7 /* TheChefzPayments */,
+				4A7B01222876F025009302E7 /* TheChefzPaymentsTests */,
+				4A7B012C2876F025009302E7 /* TheChefzPaymentsUITests */,
+				4A7B010A2876F023009302E7 /* Products */,
+				FA6918C9F1C9145CBCE655B7 /* Pods */,
+				88E76255E34A2DCA8F0420E3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4A7B010A2876F023009302E7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4A7B01092876F023009302E7 /* TheChefzPayments.app */,
+				4A7B011F2876F025009302E7 /* TheChefzPaymentsTests.xctest */,
+				4A7B01292876F025009302E7 /* TheChefzPaymentsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4A7B010B2876F023009302E7 /* TheChefzPayments */ = {
+			isa = PBXGroup;
+			children = (
+				4A7B010C2876F023009302E7 /* AppDelegate.swift */,
+				4A7B01102876F023009302E7 /* ViewController.swift */,
+				4A7B01122876F023009302E7 /* Main.storyboard */,
+				4A7B01152876F025009302E7 /* Assets.xcassets */,
+				4A7B01172876F025009302E7 /* LaunchScreen.storyboard */,
+				4A7B011A2876F025009302E7 /* Info.plist */,
+			);
+			path = TheChefzPayments;
+			sourceTree = "<group>";
+		};
+		4A7B01222876F025009302E7 /* TheChefzPaymentsTests */ = {
+			isa = PBXGroup;
+			children = (
+				4A7B01232876F025009302E7 /* TheChefzPaymentsTests.swift */,
+			);
+			path = TheChefzPaymentsTests;
+			sourceTree = "<group>";
+		};
+		4A7B012C2876F025009302E7 /* TheChefzPaymentsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4A7B012D2876F025009302E7 /* TheChefzPaymentsUITests.swift */,
+				4A7B012F2876F025009302E7 /* TheChefzPaymentsUITestsLaunchTests.swift */,
+			);
+			path = TheChefzPaymentsUITests;
+			sourceTree = "<group>";
+		};
+		88E76255E34A2DCA8F0420E3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				52D64459C86B4722E0CB3CC2 /* Pods_TheChefzPayments.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA6918C9F1C9145CBCE655B7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4E5F2D06BAA14D3FA29D3AEA /* Pods-TheChefzPayments.debug.xcconfig */,
+				47C0D736792A22C81C9A3AAD /* Pods-TheChefzPayments.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4A7B01082876F023009302E7 /* TheChefzPayments */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A7B01332876F025009302E7 /* Build configuration list for PBXNativeTarget "TheChefzPayments" */;
+			buildPhases = (
+				46F4F247470666D912591FE6 /* [CP] Check Pods Manifest.lock */,
+				4A7B01052876F023009302E7 /* Sources */,
+				4A7B01062876F023009302E7 /* Frameworks */,
+				4A7B01072876F023009302E7 /* Resources */,
+				43812C35E9AFD484200845DF /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TheChefzPayments;
+			productName = TheChefzPayments;
+			productReference = 4A7B01092876F023009302E7 /* TheChefzPayments.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4A7B011E2876F025009302E7 /* TheChefzPaymentsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A7B01362876F025009302E7 /* Build configuration list for PBXNativeTarget "TheChefzPaymentsTests" */;
+			buildPhases = (
+				4A7B011B2876F025009302E7 /* Sources */,
+				4A7B011C2876F025009302E7 /* Frameworks */,
+				4A7B011D2876F025009302E7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4A7B01212876F025009302E7 /* PBXTargetDependency */,
+			);
+			name = TheChefzPaymentsTests;
+			productName = TheChefzPaymentsTests;
+			productReference = 4A7B011F2876F025009302E7 /* TheChefzPaymentsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4A7B01282876F025009302E7 /* TheChefzPaymentsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A7B01392876F025009302E7 /* Build configuration list for PBXNativeTarget "TheChefzPaymentsUITests" */;
+			buildPhases = (
+				4A7B01252876F025009302E7 /* Sources */,
+				4A7B01262876F025009302E7 /* Frameworks */,
+				4A7B01272876F025009302E7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4A7B012B2876F025009302E7 /* PBXTargetDependency */,
+			);
+			name = TheChefzPaymentsUITests;
+			productName = TheChefzPaymentsUITests;
+			productReference = 4A7B01292876F025009302E7 /* TheChefzPaymentsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4A7B01012876F023009302E7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					4A7B01082876F023009302E7 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					4A7B011E2876F025009302E7 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 4A7B01082876F023009302E7;
+					};
+					4A7B01282876F025009302E7 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 4A7B01082876F023009302E7;
+					};
+				};
+			};
+			buildConfigurationList = 4A7B01042876F023009302E7 /* Build configuration list for PBXProject "TheChefzPayments" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4A7B01002876F023009302E7;
+			productRefGroup = 4A7B010A2876F023009302E7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4A7B01082876F023009302E7 /* TheChefzPayments */,
+				4A7B011E2876F025009302E7 /* TheChefzPaymentsTests */,
+				4A7B01282876F025009302E7 /* TheChefzPaymentsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4A7B01072876F023009302E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A7B01192876F025009302E7 /* LaunchScreen.storyboard in Resources */,
+				4A7B01162876F025009302E7 /* Assets.xcassets in Resources */,
+				4A7B01142876F023009302E7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A7B011D2876F025009302E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A7B01272876F025009302E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		43812C35E9AFD484200845DF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TheChefzPayments/Pods-TheChefzPayments-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TheChefzPayments/Pods-TheChefzPayments-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TheChefzPayments/Pods-TheChefzPayments-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		46F4F247470666D912591FE6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TheChefzPayments-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4A7B01052876F023009302E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A7B01112876F023009302E7 /* ViewController.swift in Sources */,
+				4A7B010D2876F023009302E7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A7B011B2876F025009302E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A7B01242876F025009302E7 /* TheChefzPaymentsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A7B01252876F025009302E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A7B01302876F025009302E7 /* TheChefzPaymentsUITestsLaunchTests.swift in Sources */,
+				4A7B012E2876F025009302E7 /* TheChefzPaymentsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4A7B01212876F025009302E7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4A7B01082876F023009302E7 /* TheChefzPayments */;
+			targetProxy = 4A7B01202876F025009302E7 /* PBXContainerItemProxy */;
+		};
+		4A7B012B2876F025009302E7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4A7B01082876F023009302E7 /* TheChefzPayments */;
+			targetProxy = 4A7B012A2876F025009302E7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4A7B01122876F023009302E7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4A7B01132876F023009302E7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4A7B01172876F025009302E7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4A7B01182876F025009302E7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4A7B01312876F025009302E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4A7B01322876F025009302E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4A7B01342876F025009302E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E5F2D06BAA14D3FA29D3AEA /* Pods-TheChefzPayments.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9QR2656GWH;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TheChefzPayments/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.theChefz.TheChefzPayments;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4A7B01352876F025009302E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47C0D736792A22C81C9A3AAD /* Pods-TheChefzPayments.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9QR2656GWH;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TheChefzPayments/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.theChefz.TheChefzPayments;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4A7B01372876F025009302E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9QR2656GWH;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.theChefz.TheChefzPaymentsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TheChefzPayments.app/TheChefzPayments";
+			};
+			name = Debug;
+		};
+		4A7B01382876F025009302E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9QR2656GWH;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.theChefz.TheChefzPaymentsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TheChefzPayments.app/TheChefzPayments";
+			};
+			name = Release;
+		};
+		4A7B013A2876F025009302E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9QR2656GWH;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.theChefz.TheChefzPaymentsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TheChefzPayments;
+			};
+			name = Debug;
+		};
+		4A7B013B2876F025009302E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9QR2656GWH;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.theChefz.TheChefzPaymentsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TheChefzPayments;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4A7B01042876F023009302E7 /* Build configuration list for PBXProject "TheChefzPayments" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A7B01312876F025009302E7 /* Debug */,
+				4A7B01322876F025009302E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4A7B01332876F025009302E7 /* Build configuration list for PBXNativeTarget "TheChefzPayments" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A7B01342876F025009302E7 /* Debug */,
+				4A7B01352876F025009302E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4A7B01362876F025009302E7 /* Build configuration list for PBXNativeTarget "TheChefzPaymentsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A7B01372876F025009302E7 /* Debug */,
+				4A7B01382876F025009302E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4A7B01392876F025009302E7 /* Build configuration list for PBXNativeTarget "TheChefzPaymentsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A7B013A2876F025009302E7 /* Debug */,
+				4A7B013B2876F025009302E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4A7B01012876F023009302E7 /* Project object */;
+}
