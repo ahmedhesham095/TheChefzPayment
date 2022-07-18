@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "TheChefzPayments"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.3"
   spec.summary      = "An iOS Repository for TheChefz Payments written in Swift"
 
   # This description is used to generate tags and improve search results.
@@ -24,9 +24,7 @@ Pod::Spec.new do |spec|
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  spec.description  = <<-DESC
-This CocoaPods library helps you perform calculation.
-                   DESC
+  spec.description  = "an iOS Repository for TheChefz Payments"
 
   spec.homepage     = "https://github.com/ahmedhesham095/TheChefzPayment"
 

@@ -8,14 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		147FAD6E258824114CC83357 /* Pods_TheChefzPayments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D64459C86B4722E0CB3CC2 /* Pods_TheChefzPayments.framework */; };
+		4A78F3D228857DF300F9A038 /* CheckoutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A78F3D128857DF300F9A038 /* CheckoutHelper.swift */; };
+		4A78F3D528858FD500F9A038 /* PaymentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A78F3D428858FD500F9A038 /* PaymentService.swift */; };
+		4A78F3D72885911C00F9A038 /* PaymentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A78F3D62885911C00F9A038 /* PaymentProvider.swift */; };
+		4A78F3D928859AE000F9A038 /* PaymentResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A78F3D828859AE000F9A038 /* PaymentResult.swift */; };
+		4A78F3DB28859B1F00F9A038 /* PaymentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A78F3DA28859B1F00F9A038 /* PaymentData.swift */; };
+		4A78F3DF2885A8AD00F9A038 /* ThreeDsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A78F3DD2885A8AD00F9A038 /* ThreeDsViewController.swift */; };
+		4A78F3E02885A8AD00F9A038 /* ThreeDsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A78F3DE2885A8AD00F9A038 /* ThreeDsViewController.xib */; };
 		4A7B010D2876F023009302E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7B010C2876F023009302E7 /* AppDelegate.swift */; };
-		4A7B01112876F023009302E7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7B01102876F023009302E7 /* ViewController.swift */; };
+		4A7B01112876F023009302E7 /* ChefzPaymentInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7B01102876F023009302E7 /* ChefzPaymentInitializer.swift */; };
 		4A7B01142876F023009302E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A7B01122876F023009302E7 /* Main.storyboard */; };
 		4A7B01162876F025009302E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A7B01152876F025009302E7 /* Assets.xcassets */; };
 		4A7B01192876F025009302E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A7B01172876F025009302E7 /* LaunchScreen.storyboard */; };
 		4A7B01242876F025009302E7 /* TheChefzPaymentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7B01232876F025009302E7 /* TheChefzPaymentsTests.swift */; };
 		4A7B012E2876F025009302E7 /* TheChefzPaymentsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7B012D2876F025009302E7 /* TheChefzPaymentsUITests.swift */; };
 		4A7B01302876F025009302E7 /* TheChefzPaymentsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7B012F2876F025009302E7 /* TheChefzPaymentsUITestsLaunchTests.swift */; };
+		4A7DE6C228840FC100694F66 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7DE6C128840FC100694F66 /* Constants.swift */; };
+		4A7DE6C52884492100694F66 /* ChefzPaymentPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7DE6C42884492100694F66 /* ChefzPaymentPresenter.swift */; };
+		4A7DE6C82884541B00694F66 /* ChefzPaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7DE6C72884541B00694F66 /* ChefzPaymentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +47,16 @@
 
 /* Begin PBXFileReference section */
 		47C0D736792A22C81C9A3AAD /* Pods-TheChefzPayments.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheChefzPayments.release.xcconfig"; path = "Target Support Files/Pods-TheChefzPayments/Pods-TheChefzPayments.release.xcconfig"; sourceTree = "<group>"; };
+		4A78F3D128857DF300F9A038 /* CheckoutHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutHelper.swift; sourceTree = "<group>"; };
+		4A78F3D428858FD500F9A038 /* PaymentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentService.swift; sourceTree = "<group>"; };
+		4A78F3D62885911C00F9A038 /* PaymentProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentProvider.swift; sourceTree = "<group>"; };
+		4A78F3D828859AE000F9A038 /* PaymentResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentResult.swift; sourceTree = "<group>"; };
+		4A78F3DA28859B1F00F9A038 /* PaymentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentData.swift; sourceTree = "<group>"; };
+		4A78F3DD2885A8AD00F9A038 /* ThreeDsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDsViewController.swift; sourceTree = "<group>"; };
+		4A78F3DE2885A8AD00F9A038 /* ThreeDsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThreeDsViewController.xib; sourceTree = "<group>"; };
 		4A7B01092876F023009302E7 /* TheChefzPayments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheChefzPayments.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A7B010C2876F023009302E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4A7B01102876F023009302E7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4A7B01102876F023009302E7 /* ChefzPaymentInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefzPaymentInitializer.swift; sourceTree = "<group>"; };
 		4A7B01132876F023009302E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4A7B01152876F025009302E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A7B01182876F025009302E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +66,9 @@
 		4A7B01292876F025009302E7 /* TheChefzPaymentsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheChefzPaymentsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A7B012D2876F025009302E7 /* TheChefzPaymentsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheChefzPaymentsUITests.swift; sourceTree = "<group>"; };
 		4A7B012F2876F025009302E7 /* TheChefzPaymentsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheChefzPaymentsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4A7DE6C128840FC100694F66 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4A7DE6C42884492100694F66 /* ChefzPaymentPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefzPaymentPresenter.swift; sourceTree = "<group>"; };
+		4A7DE6C72884541B00694F66 /* ChefzPaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefzPaymentViewController.swift; sourceTree = "<group>"; };
 		4E5F2D06BAA14D3FA29D3AEA /* Pods-TheChefzPayments.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheChefzPayments.debug.xcconfig"; path = "Target Support Files/Pods-TheChefzPayments/Pods-TheChefzPayments.debug.xcconfig"; sourceTree = "<group>"; };
 		52D64459C86B4722E0CB3CC2 /* Pods_TheChefzPayments.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheChefzPayments.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -79,6 +99,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A78F3D028857DDD00F9A038 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4A78F3D128857DF300F9A038 /* CheckoutHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		4A78F3D328858FBF00F9A038 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4A78F3D428858FD500F9A038 /* PaymentService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		4A78F3DC2885A87D00F9A038 /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				4A7DE6C72884541B00694F66 /* ChefzPaymentViewController.swift */,
+			);
+			path = Examples;
+			sourceTree = "<group>";
+		};
 		4A7B01002876F023009302E7 = {
 			isa = PBXGroup;
 			children = (
@@ -104,8 +148,16 @@
 		4A7B010B2876F023009302E7 /* TheChefzPayments */ = {
 			isa = PBXGroup;
 			children = (
+				4A78F3DC2885A87D00F9A038 /* Examples */,
+				4A78F3D328858FBF00F9A038 /* Services */,
+				4A78F3D028857DDD00F9A038 /* Helpers */,
+				4A7DE6C92884543B00694F66 /* Core */,
+				4A7DE6C32884424600694F66 /* Network */,
+				4A7DE6C028840FAD00694F66 /* Constants */,
+				4A7DE6BF28840F5700694F66 /* Presenter */,
+				4A7DE6BE28840F4900694F66 /* ViewControllers */,
+				4A7DE6BD28840F4300694F66 /* Models */,
 				4A7B010C2876F023009302E7 /* AppDelegate.swift */,
-				4A7B01102876F023009302E7 /* ViewController.swift */,
 				4A7B01122876F023009302E7 /* Main.storyboard */,
 				4A7B01152876F025009302E7 /* Assets.xcassets */,
 				4A7B01172876F025009302E7 /* LaunchScreen.storyboard */,
@@ -131,6 +183,56 @@
 			path = TheChefzPaymentsUITests;
 			sourceTree = "<group>";
 		};
+		4A7DE6BD28840F4300694F66 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4A78F3D828859AE000F9A038 /* PaymentResult.swift */,
+				4A78F3DA28859B1F00F9A038 /* PaymentData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4A7DE6BE28840F4900694F66 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4A78F3DD2885A8AD00F9A038 /* ThreeDsViewController.swift */,
+				4A78F3DE2885A8AD00F9A038 /* ThreeDsViewController.xib */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4A7DE6BF28840F5700694F66 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				4A7DE6C42884492100694F66 /* ChefzPaymentPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		4A7DE6C028840FAD00694F66 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				4A7DE6C128840FC100694F66 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		4A7DE6C32884424600694F66 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				4A78F3D62885911C00F9A038 /* PaymentProvider.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		4A7DE6C92884543B00694F66 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				4A7B01102876F023009302E7 /* ChefzPaymentInitializer.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		88E76255E34A2DCA8F0420E3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,7 +247,6 @@
 				4E5F2D06BAA14D3FA29D3AEA /* Pods-TheChefzPayments.debug.xcconfig */,
 				47C0D736792A22C81C9A3AAD /* Pods-TheChefzPayments.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -255,6 +356,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A78F3E02885A8AD00F9A038 /* ThreeDsViewController.xib in Resources */,
 				4A7B01192876F025009302E7 /* LaunchScreen.storyboard in Resources */,
 				4A7B01162876F025009302E7 /* Assets.xcassets in Resources */,
 				4A7B01142876F023009302E7 /* Main.storyboard in Resources */,
@@ -324,8 +426,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A7B01112876F023009302E7 /* ViewController.swift in Sources */,
+				4A7DE6C82884541B00694F66 /* ChefzPaymentViewController.swift in Sources */,
+				4A78F3D72885911C00F9A038 /* PaymentProvider.swift in Sources */,
+				4A78F3DF2885A8AD00F9A038 /* ThreeDsViewController.swift in Sources */,
+				4A78F3D228857DF300F9A038 /* CheckoutHelper.swift in Sources */,
+				4A7DE6C52884492100694F66 /* ChefzPaymentPresenter.swift in Sources */,
+				4A78F3DB28859B1F00F9A038 /* PaymentData.swift in Sources */,
+				4A78F3D928859AE000F9A038 /* PaymentResult.swift in Sources */,
+				4A7B01112876F023009302E7 /* ChefzPaymentInitializer.swift in Sources */,
 				4A7B010D2876F023009302E7 /* AppDelegate.swift in Sources */,
+				4A78F3D528858FD500F9A038 /* PaymentService.swift in Sources */,
+				4A7DE6C228840FC100694F66 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

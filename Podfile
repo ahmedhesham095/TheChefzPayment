@@ -6,7 +6,7 @@ target 'TheChefzPayments' do
   use_frameworks!
 
   # Pods for TheChefzPayments
-  pod 'Moya'
+  pod 'Moya'  , '~> 13.0'
   pod 'ObjectMapper'
-
+  pod 'Frames'
 end
