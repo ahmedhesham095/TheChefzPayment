@@ -13,7 +13,7 @@ class PaymentService {
     
     static func payNewCard(token: String , bin: String , refrence: String , cvv: String , isDefault: Bool, callback:@escaping (Bool,String , String) -> Void) {
         
-        let provider = MoyaProvider<PaymentAPI>(plugins: [NetworkLoggerPlugin(verbose: true)])
+        let provider = MoyaProvider<PaymentAPI>(plugins: [NetworkLoggerPlugin()])
         
         provider.request(.payNewCard(token: token, bin: bin, refrence: refrence, cvv: cvv, isDefault: isDefault)) { result in
             switch result {
@@ -40,7 +40,7 @@ class PaymentService {
     
     static func verifyCard(token: String , refrence: String , cvv: String , isDefault: Bool, callback:@escaping (Bool,String , String) -> Void) {
         
-        let provider = MoyaProvider<PaymentAPI>(plugins: [NetworkLoggerPlugin(verbose: true)])
+        let provider = MoyaProvider<PaymentAPI>(plugins: [NetworkLoggerPlugin()])
         
         provider.request(.verifyCard(token: token, refrence: refrence, cvv: cvv, isDefault: isDefault)) { result in
             switch result {
@@ -67,7 +67,7 @@ class PaymentService {
     
     static func paySavedCard(cardId: String , refrence: String, callback:@escaping (Bool,String , String) -> Void) {
         
-        let provider = MoyaProvider<PaymentAPI>(plugins: [NetworkLoggerPlugin(verbose: true)])
+        let provider = MoyaProvider<PaymentAPI>(plugins: [NetworkLoggerPlugin()])
         
         provider.request(.payCardId(cardId: cardId, refrence: refrence)) { result in
             switch result {

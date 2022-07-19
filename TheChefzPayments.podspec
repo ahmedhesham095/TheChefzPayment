@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "TheChefzPayments"
-  spec.version      = "0.0.3"
+  spec.version      = "1.0.0"
   spec.summary      = "An iOS Repository for TheChefz Payments written in Swift"
 
   # This description is used to generate tags and improve search results.
@@ -129,4 +129,5 @@ Pod::Spec.new do |spec|
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
     spec.dependency "Moya"
     spec.dependency "ObjectMapper"
+    spec.dependency "Frames"
 end
