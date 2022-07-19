@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Frames
 
 protocol TheChefzPaymentResult {
     func didSucess()

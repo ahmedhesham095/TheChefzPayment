@@ -22,7 +22,6 @@ class PaymentConstants {
     
     static let UDK_TOKEN = "User_Token"
     static let CHECKOUT_PUBLIC_KEY = "pk_test_a8c8e0b6-023b-4402-9704-47d4de12d6e4"
-    static let CHECKOUT_SECRET_KEY = "sk_test_bcafb792-6890-4f8b-bf53-2f68ec2ace41"
     static let CHECKOUT_LIVE_BASEURL = "https://api.checkout.com"
     static let CHECKOUT_SANDBOX_BASEURL = "https://api.sandbox.checkout.com"
     static let BASE_PROD_URL = "https://api.thechefz.co/v9"
