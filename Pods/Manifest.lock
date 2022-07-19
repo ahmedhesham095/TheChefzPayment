@@ -1,14 +1,13 @@
 PODS:
-  - Alamofire (4.9.1)
+  - Alamofire (5.6.2)
   - CheckoutEventLoggerKit (1.1.1)
   - Frames (3.5.2):
     - CheckoutEventLoggerKit (= 1.1.1)
     - PhoneNumberKit (= 3.3.3)
-  - Moya (13.0.1):
-    - Moya/Core (= 13.0.1)
-  - Moya/Core (13.0.1):
-    - Alamofire (~> 4.1)
-    - Result (~> 4.1)
+  - Moya (15.0.0):
+    - Moya/Core (= 15.0.0)
+  - Moya/Core (15.0.0):
+    - Alamofire (~> 5.0)
   - ObjectMapper (4.2.0)
   - PhoneNumberKit (3.3.3):
     - PhoneNumberKit/PhoneNumberKitCore (= 3.3.3)
@@ -16,11 +15,10 @@ PODS:
   - PhoneNumberKit/PhoneNumberKitCore (3.3.3)
   - PhoneNumberKit/UIKit (3.3.3):
     - PhoneNumberKit/PhoneNumberKitCore
-  - Result (4.1.0)
 
 DEPENDENCIES:
   - Frames
-  - Moya (~> 13.0)
+  - Moya
   - ObjectMapper
 
 SPEC REPOS:
@@ -31,17 +29,15 @@ SPEC REPOS:
     - Moya
     - ObjectMapper
     - PhoneNumberKit
-    - Result
 
 SPEC CHECKSUMS:
-  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
   CheckoutEventLoggerKit: 18f1afe34ff217c3624396f2c2b4d26db8e6c2d9
   Frames: 9090a075bd8fe0fc883e32e380cd09e41c9cc0bc
-  Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
+  Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   PhoneNumberKit: 4ce83273551c4d2ae10b7361162f4283dd02835f
-  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
 
-PODFILE CHECKSUM: 237f3eb939dee817c7ef68e865c480e59c021efe
+PODFILE CHECKSUM: 47c086d374655cd129d3eda44c7c60dc31966abc
 
 COCOAPODS: 1.10.2

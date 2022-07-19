@@ -4,5 +4,4 @@ ${BUILT_PRODUCTS_DIR}/Frames/Frames.framework
 ${BUILT_PRODUCTS_DIR}/Moya/Moya.framework
 ${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework
 ${BUILT_PRODUCTS_DIR}/PhoneNumberKit/PhoneNumberKit.framework
-${BUILT_PRODUCTS_DIR}/Result/Result.framework
 ${PODS_XCFRAMEWORKS_BUILD_DIR}/CheckoutEventLoggerKit/CheckoutEventLoggerKit.framework/CheckoutEventLoggerKit
