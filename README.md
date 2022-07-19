@@ -12,7 +12,7 @@ Initialize the SDK
 // user token
 //environment sandbox / production
     private lazy var initializer: ChefzPaymentInitializer = {
-        return ChefzPaymentInitializer(language: .ar, environment: .sandBox, userToken: "D7S5KRMVO7ftPFX59T3QeltGpbjOA0_Yyxq35elx", delegate: self, viewController: self)
+        return ChefzPaymentInitializer(language: .ar, environment: .sandBox, userToken: "TOKEN", delegate: self, viewController: self)
     }()
 ```
 # Usage
@@ -42,11 +42,11 @@ TheChefzPaymentResult protocol
 extension ViewController : TheChefzPaymentResult {
 // payment success
     func didSucess() {
-        print("success")
+    
     }
     // did fail and return the message from the payment gateway
     func didFail(with message: String) {
-        print("fail")
+        debugPprint(message)
     }
     
 }
