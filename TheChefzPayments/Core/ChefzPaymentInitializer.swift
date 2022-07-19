@@ -8,13 +8,13 @@
 import UIKit
 import Frames
 
-protocol TheChefzPaymentResult {
+public protocol TheChefzPaymentResult {
     func didSucess()
     func didFail(with message: String)
 }
 
 
-class ChefzPaymentInitializer  {
+public class ChefzPaymentInitializer  {
     
     private  var delegate: TheChefzPaymentResult?
     weak var presentingVC: UIViewController?
@@ -23,7 +23,7 @@ class ChefzPaymentInitializer  {
         return ChefzPaymentPresenter(delegate: self)
     }()
     
-    init(language: Langugage , environment: Environment , userToken: String , delegate: TheChefzPaymentResult , viewController: UIViewController) {
+    public init(language: Langugage , environment: Environment , userToken: String , delegate: TheChefzPaymentResult , viewController: UIViewController) {
         self.delegate = delegate
         self.presentingVC = viewController
         PaymentConstants.langugae = language
@@ -31,7 +31,7 @@ class ChefzPaymentInitializer  {
         PaymentConstants.setUserToken(token: userToken)
     }
     
-    func payWithNewCardCard(cardNumber: String , exipyMonth: String , expiryYear : String , cvv: String , cardHolderName: String , merchantReference: String , isDefault: Bool) {
+    public func payWithNewCardCard(cardNumber: String , exipyMonth: String , expiryYear : String , cvv: String , cardHolderName: String , merchantReference: String , isDefault: Bool) {
         
         CheckoutHelper.getCardToken(cardNumber: cardNumber, exipyMonth: exipyMonth, expiryYear: expiryYear, cvv: cvv, cardHolderName: cardHolderName, environment: PaymentConstants.environment ) { [weak self]  success, token, bin, error  in
             if success == false {
@@ -42,7 +42,7 @@ class ChefzPaymentInitializer  {
         }
     }
     
-    func verifyCard(cardNumber: String , exipyMonth: String , expiryYear : String , cvv: String , cardHolderName: String , merchantReference: String , isDefault: Bool) {
+    public func verifyCard(cardNumber: String , exipyMonth: String , expiryYear : String , cvv: String , cardHolderName: String , merchantReference: String , isDefault: Bool) {
         
         CheckoutHelper.getCardToken(cardNumber: cardNumber, exipyMonth: exipyMonth, expiryYear: expiryYear, cvv: cvv, cardHolderName: cardHolderName, environment: PaymentConstants.environment ) { [weak self]  success, token, bin, error  in
             if success == false {
@@ -53,7 +53,7 @@ class ChefzPaymentInitializer  {
         }
     }
     
-    func paySavedCard(cardId: String, merchantReference: String) {
+    public func paySavedCard(cardId: String, merchantReference: String) {
         self.presenter.paySavedCard(cardId: cardId, refrence: merchantReference)
     }
     

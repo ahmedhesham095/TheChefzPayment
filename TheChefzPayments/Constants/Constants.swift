@@ -8,12 +8,12 @@
 import Foundation
 
 
-enum Environment {
+public enum Environment {
     case sandBox
     case production
 }
 
-enum Langugage {
+public enum Langugage {
     case en
     case ar
 }
