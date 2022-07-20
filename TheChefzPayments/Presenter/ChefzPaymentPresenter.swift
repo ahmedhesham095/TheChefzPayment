@@ -65,4 +65,14 @@ class ChefzPaymentPresenter {
         }
     }
     
+    func payApplePay(token: String , refrence: String) {
+        PaymentService.payApplePay(token: token, refrence: refrence) { [weak self] success , errorMessage in
+            if success == true {
+                self?.delegate?.didSucessPayment()
+            } else {
+                self?.delegate?.didFailPayment(with: errorMessage)
+            }
+        }
+    }
+    
 }

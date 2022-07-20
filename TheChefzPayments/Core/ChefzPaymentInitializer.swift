@@ -57,6 +57,10 @@ public class ChefzPaymentInitializer  {
         self.presenter.paySavedCard(cardId: cardId, refrence: merchantReference)
     }
     
+    public func payWithApplePay(token: String , merchantRefrence: String)  {
+        self.presenter.payApplePay(token: token, refrence: merchantRefrence)
+    }
+    
 }
 
 extension ChefzPaymentInitializer: ChefzPayment {

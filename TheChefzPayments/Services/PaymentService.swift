@@ -91,4 +91,27 @@ class PaymentService {
             }
         }
     }
+    
+    static func payApplePay(token: String , refrence: String, callback:@escaping (Bool,String) -> Void) {
+        
+        let provider = MoyaProvider<PaymentAPI>(plugins: [NetworkLoggerPlugin()])
+        
+        provider.request(.payApplePay(token: token, refrence: refrence)) { result in
+            switch result {
+            case let .success(response):
+                do {
+                    let result = Mapper<PaymentResult>().map(JSON:try response.mapJSON() as! [String : Any])
+                    if result?.success ?? false {
+                        callback(true , "")
+                    } else {
+                        callback(false , result?.status_message ?? "")
+                    }
+                } catch {
+                    callback(false , "")
+                }
+            case .failure(_):
+                callback(false , "")
+            }
+        }
+    }
 }
