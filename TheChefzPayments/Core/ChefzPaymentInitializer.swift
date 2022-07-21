@@ -76,7 +76,8 @@ extension ChefzPaymentInitializer: ChefzPayment {
     
     func willPayWith3DS(link: String) {
         debugPrint(link)
-        let threeDsVC = ThreeDsViewController()
+        let bundle = Bundle(for:ThreeDsViewController.self)
+        let threeDsVC = ThreeDsViewController(nibName:"ThreeDsViewController" , bundle: bundle)
         threeDsVC.threeDsURL = link
         threeDsVC.delegate = self
         threeDsVC.modalPresentationStyle = .fullScreen
