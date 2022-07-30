@@ -11,8 +11,14 @@ import Frames
 public protocol TheChefzPaymentResult {
     func didSucess()
     func didFail(with message: String)
+    func didSucess(ref: String)
+    func didFail(ref: String)
 }
 
+extension TheChefzPaymentResult {
+    func didSucess(ref: String) {}
+    func didFail(ref: String) {}
+}
 
 public class ChefzPaymentInitializer  {
     
@@ -48,7 +54,7 @@ public class ChefzPaymentInitializer  {
             if success == false {
                 self?.delegate?.didFail(with: error ?? "")
             } else {
-                self?.presenter.verifyCard(token: token ?? "", refrence: merchantReference, cvv: cvv, isDefault: isDefault)
+                self?.presenter.verifyCard(token: token ?? "", cvv: cvv, isDefault: isDefault)
             }
         }
     }
@@ -64,6 +70,22 @@ public class ChefzPaymentInitializer  {
 }
 
 extension ChefzPaymentInitializer: ChefzPayment {
+    
+    func didSuccessWithRef(ref: String) {
+        delegate?.didSucess(ref: ref)
+    }
+    
+    func willVerifyWith3DS(link: String, ref: String) {
+        let bundle = Bundle(for:ThreeDsViewController.self)
+        let threeDsVC = ThreeDsViewController(nibName:"ThreeDsViewController" , bundle: bundle)
+        threeDsVC.threeDsURL = link
+        threeDsVC.delegate = self
+        threeDsVC.merchantRef = ref
+        threeDsVC.isVerfyCard = true
+        threeDsVC.modalPresentationStyle = .fullScreen
+        presentingVC?.present(threeDsVC , animated: true)
+    }
+    
     
     func didSucessPayment() {
         delegate?.didSucess()
@@ -88,6 +110,17 @@ extension ChefzPaymentInitializer: ChefzPayment {
 }
 
 extension ChefzPaymentInitializer: ThreeDsResult {
+    
+    func threeDsSuccess(ref: String) {
+        debugPrint(ref)
+        delegate?.didSucess(ref: ref)
+    }
+    
+    func threeDsFail(ref: String) {
+        debugPrint(ref)
+        delegate?.didFail(with: ref)
+    }
+    
     func threeDsSuccess() {
         debugPrint("3dsSuccess")
         delegate?.didSucess()

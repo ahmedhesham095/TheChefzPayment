@@ -38,29 +38,29 @@ class PaymentService {
         }
     }
     
-    static func verifyCard(token: String , refrence: String , cvv: String , isDefault: Bool, callback:@escaping (Bool,String , String) -> Void) {
+    static func verifyCard(token: String , cvv: String , isDefault: Bool, callback:@escaping (Bool, String , String , String) -> Void) {
         
         let provider = MoyaProvider<PaymentAPI>(plugins: [NetworkLoggerPlugin()])
         
-        provider.request(.verifyCard(token: token, refrence: refrence, cvv: cvv, isDefault: isDefault)) { result in
+        provider.request(.verifyCard(token: token, cvv: cvv, isDefault: isDefault)) { result in
             switch result {
             case let .success(response):
                 do {
                     let result = Mapper<PaymentResult>().map(JSON:try response.mapJSON() as! [String : Any])
                     if result?.success ?? false {
                         if result?.data?.threedsUrl != nil {
-                            callback(true , result?.data?.threedsUrl ?? "" , "")
+                            callback(true , result?.data?.threedsUrl ?? "" ,"\(result?.data?.merchant_reference ?? 0)" , "")
                         } else {
-                            callback(true , "", "")
+                            callback(true , "", "\(result?.data?.merchant_reference ?? 0)" , "")
                         }
                     } else {
-                        callback(false , "" , result?.status_message ?? "")
+                        callback(false , "" , "" , result?.status_message ?? "")
                     }
                 } catch {
-                    callback(false , "", "")
+                    callback(false , "", "", "")
                 }
             case .failure(_):
-                callback(false , "", "")
+                callback(false , "", "", "")
             }
         }
     }

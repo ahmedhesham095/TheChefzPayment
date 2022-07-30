@@ -11,7 +11,7 @@ import ObjectMapper
 class PaymentData : NSObject, NSCoding, Mappable{
     
     var threedsUrl : String?
-    
+    var merchant_reference: Int?
     
     class func newInstance(map: Map) -> Mappable?{
         return PaymentData()
@@ -22,7 +22,7 @@ class PaymentData : NSObject, NSCoding, Mappable{
     func mapping(map: Map)
     {
         threedsUrl <- map["3ds_url"]
-        
+        merchant_reference <- map["merchant_reference"]
     }
     
     /**
@@ -48,3 +48,4 @@ class PaymentData : NSObject, NSCoding, Mappable{
     }
     
 }
+

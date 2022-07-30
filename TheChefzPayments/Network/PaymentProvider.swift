@@ -9,7 +9,7 @@ import Moya
 
 enum PaymentAPI {
     case payNewCard(token: String , bin: String , refrence: String , cvv: String , isDefault: Bool)
-    case verifyCard(token: String , refrence: String , cvv: String , isDefault: Bool)
+    case verifyCard(token: String , cvv: String , isDefault: Bool)
     case payCardId(cardId: String , refrence: String)
     case payApplePay(token: String , refrence: String)
 }
@@ -63,13 +63,13 @@ extension PaymentAPI: TargetType {
             
             return .requestParameters(parameters: ["source": source , "reference": refrence , "cvv": cvv , "is_default": isDefault , "bin" : bin], encoding:  JSONEncoding.default)
             
-        case .verifyCard(token: let token, refrence: let refrence, cvv: let cvv, isDefault: let isDefault):
+        case .verifyCard(token: let token, cvv: let cvv, isDefault: let isDefault):
             let source: [String : Any] =  [
                 "type": "token",
                 "token": token
             ]
             
-            return .requestParameters(parameters: ["source": source , "reference": refrence , "cvv": cvv , "is_default": isDefault ,  "verifyCard": true], encoding:  JSONEncoding.default)
+            return .requestParameters(parameters: ["source": source , "cvv": cvv , "is_default": isDefault ,  "verifyCard": true], encoding:  JSONEncoding.default)
             
         case .payCardId(cardId: let cardId, refrence: let refrence):
             let source: [String : Any] =  [

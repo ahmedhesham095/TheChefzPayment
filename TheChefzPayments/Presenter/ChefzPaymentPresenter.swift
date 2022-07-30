@@ -11,6 +11,8 @@ protocol ChefzPayment {
     func didSucessPayment()
     func didFailPayment(with message: String)
     func willPayWith3DS(link: String)
+    func didSuccessWithRef(ref: String)
+    func willVerifyWith3DS(link: String , ref: String)
 }
 
 
@@ -37,13 +39,13 @@ class ChefzPaymentPresenter {
         }
     }
     
-    func verifyCard(token: String , refrence: String , cvv: String , isDefault: Bool) {
-        PaymentService.verifyCard(token: token, refrence: refrence, cvv: cvv, isDefault: isDefault)  { [weak self] success, thereeDS , errorMessage in
+    func verifyCard(token: String , cvv: String , isDefault: Bool) {
+        PaymentService.verifyCard(token: token, cvv: cvv, isDefault: isDefault)  { [weak self] success, thereeDS , merchantRef , errorMessage in
             if success == true {
                 if thereeDS != "" {
-                    self?.delegate?.willPayWith3DS(link: thereeDS)
+                    self?.delegate?.willVerifyWith3DS(link: thereeDS, ref: merchantRef)
                 } else {
-                    self?.delegate?.didSucessPayment()
+                    self?.delegate?.didSuccessWithRef(ref: merchantRef)
                 }
             } else {
                 self?.delegate?.didFailPayment(with: errorMessage)

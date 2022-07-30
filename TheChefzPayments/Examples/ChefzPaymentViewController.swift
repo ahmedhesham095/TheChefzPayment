@@ -16,9 +16,9 @@ class ChefzPaymentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        initializer.payWithNewCardCard(cardNumber: "4543474002249996", exipyMonth: "01", expiryYear: "29", cvv: "956", cardHolderName: "test", merchantReference: "8361792", isDefault: true)
+       // initializer.payWithNewCardCard(cardNumber: "4543474002249996", exipyMonth: "01", expiryYear: "29", cvv: "956", cardHolderName: "test", merchantReference: "8361792", isDefault: true)
         
-     //   initializer.verifyCard(cardNumber: "4543474002249996", exipyMonth: "01", expiryYear: "29", cvv: "956", cardHolderName: "test", merchantReference: "8361792", isDefault: true)
+        initializer.verifyCard(cardNumber: "4543474002249996", exipyMonth: "01", expiryYear: "29", cvv: "956", cardHolderName: "test", merchantReference: "8361792", isDefault: true)
 //        initializer.paySavedCard(cardId: "403480", merchantReference: "8361800")
     }
     
@@ -33,6 +33,14 @@ extension ChefzPaymentViewController: TheChefzPaymentResult {
     
     func didFail(with message: String) {
         print("fail")
+    }
+    
+    func didSucess(ref: String) {
+        print(ref)
+    }
+    
+    func didFail(ref: String) {
+        print(ref)
     }
     
 }
