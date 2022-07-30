@@ -12,6 +12,7 @@ protocol ChefzPayment {
     func didFailPayment(with message: String)
     func willPayWith3DS(link: String)
     func didSuccessWithRef(ref: String)
+    func didFailWithRef(ref: String)
     func willVerifyWith3DS(link: String , ref: String)
 }
 
@@ -48,7 +49,7 @@ class ChefzPaymentPresenter {
                     self?.delegate?.didSuccessWithRef(ref: merchantRef)
                 }
             } else {
-                self?.delegate?.didFailPayment(with: errorMessage)
+                self?.delegate?.didFailWithRef(ref: merchantRef)
             }
         }
     }

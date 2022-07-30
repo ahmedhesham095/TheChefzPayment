@@ -11,13 +11,13 @@ import Frames
 public protocol TheChefzPaymentResult {
     func didSucess()
     func didFail(with message: String)
-    func didSucess(ref: String)
-    func didFail(ref: String)
+    func didVerifySucess(ref: String)
+    func didVerifyFail(ref: String)
 }
 
 extension TheChefzPaymentResult {
-    func didSucess(ref: String) {}
-    func didFail(ref: String) {}
+    func didVerifySucess(ref: String) {}
+    func didVerifyFail(ref: String) {}
 }
 
 public class ChefzPaymentInitializer  {
@@ -71,8 +71,13 @@ public class ChefzPaymentInitializer  {
 
 extension ChefzPaymentInitializer: ChefzPayment {
     
+    func didFailWithRef(ref: String) {
+        delegate?.didVerifyFail(ref: ref)
+    }
+    
+    
     func didSuccessWithRef(ref: String) {
-        delegate?.didSucess(ref: ref)
+        delegate?.didVerifySucess(ref: ref)
     }
     
     func willVerifyWith3DS(link: String, ref: String) {
@@ -111,14 +116,14 @@ extension ChefzPaymentInitializer: ChefzPayment {
 
 extension ChefzPaymentInitializer: ThreeDsResult {
     
-    func threeDsSuccess(ref: String) {
+    func threeDsVerifySuccess(ref: String) {
         debugPrint(ref)
-        delegate?.didSucess(ref: ref)
+        delegate?.didVerifySucess(ref: ref)
     }
     
-    func threeDsFail(ref: String) {
+    func threeDsVerifyFail(ref: String) {
         debugPrint(ref)
-        delegate?.didFail(with: ref)
+        delegate?.didVerifyFail(ref: ref)
     }
     
     func threeDsSuccess() {
@@ -131,3 +136,4 @@ extension ChefzPaymentInitializer: ThreeDsResult {
         delegate?.didFail(with: "")
     }
 }
+

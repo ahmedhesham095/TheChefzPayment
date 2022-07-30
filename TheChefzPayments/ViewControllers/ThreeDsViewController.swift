@@ -11,8 +11,8 @@ import WebKit
 protocol ThreeDsResult {
     func threeDsSuccess()
     func threeDsFail()
-    func threeDsSuccess(ref: String)
-    func threeDsFail(ref: String)
+    func threeDsVerifySuccess(ref: String)
+    func threeDsVerifyFail(ref: String)
 }
 
 class ThreeDsViewController: UIViewController {
@@ -39,7 +39,7 @@ extension ThreeDsViewController : WKNavigationDelegate {
             if urlStr.contains("payment/success") {
                 DispatchQueue.main.async {
                     self.dismiss(animated: true, completion: {
-                        self.isVerfyCard ? self.delegate?.threeDsSuccess(ref: self.merchantRef ?? "") : self.delegate?.threeDsSuccess()
+                        self.isVerfyCard ? self.delegate?.threeDsVerifySuccess(ref: self.merchantRef ?? "") : self.delegate?.threeDsSuccess()
                     })
                 }
             }
@@ -47,7 +47,7 @@ extension ThreeDsViewController : WKNavigationDelegate {
             if urlStr.contains("payment/failed") {
                 DispatchQueue.main.async {
                     self.dismiss(animated: true, completion: {
-                        self.isVerfyCard ? self.delegate?.threeDsFail(ref: self.merchantRef ?? "") : self.delegate?.threeDsFail()
+                        self.isVerfyCard ? self.delegate?.threeDsVerifyFail(ref: self.merchantRef ?? "") : self.delegate?.threeDsFail()
                     })
                 }
             }

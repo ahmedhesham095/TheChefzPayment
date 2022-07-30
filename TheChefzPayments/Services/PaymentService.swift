@@ -54,7 +54,7 @@ class PaymentService {
                             callback(true , "", "\(result?.data?.merchant_reference ?? 0)" , "")
                         }
                     } else {
-                        callback(false , "" , "" , result?.status_message ?? "")
+                        callback(false , "" , "\(result?.data?.merchant_reference ?? 0)" , result?.status_message ?? "")
                     }
                 } catch {
                     callback(false , "", "", "")
