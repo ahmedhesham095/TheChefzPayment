@@ -12,6 +12,7 @@ enum PaymentAPI {
     case verifyCard(token: String , cvv: String , isDefault: Bool)
     case payCardId(cardId: String , refrence: String)
     case payApplePay(token: String , refrence: String)
+    case closeTransactionById(id: String)
 }
 
 extension PaymentAPI: TargetType {
@@ -36,6 +37,8 @@ extension PaymentAPI: TargetType {
             return PaymentConstants.PaymentEndPoints.payNewCard.rawValue
         case .payApplePay:
             return PaymentConstants.PaymentEndPoints.payNewCard.rawValue
+        case .closeTransactionById:
+            return PaymentConstants.PaymentEndPoints.closeTransaction.rawValue
         }
     }
     
@@ -49,6 +52,8 @@ extension PaymentAPI: TargetType {
             return .post
         case .payApplePay:
             return .post
+        case .closeTransactionById:
+            return .get
         }
     }
     
@@ -85,6 +90,8 @@ extension PaymentAPI: TargetType {
             ]
             
             return .requestParameters(parameters: ["source": source , "reference": refrence , "payment_method_type" : "applepay"], encoding:  JSONEncoding.default)
+        case .closeTransactionById(id: let id):
+            return .requestParameters(parameters: ["id": id], encoding:  URLEncoding.queryString)
         }
     }
     

@@ -13,6 +13,7 @@ protocol ThreeDsResult {
     func threeDsFail()
     func threeDsVerifySuccess(ref: String)
     func threeDsVerifyFail(ref: String)
+    func closeTransactionById(Id: String)
 }
 
 class ThreeDsViewController: UIViewController {
@@ -31,6 +32,10 @@ class ThreeDsViewController: UIViewController {
         webView.navigationDelegate = self
     }
 
+    func getQueryStringParameter(url: String, param: String) -> String? {
+      guard let url = URLComponents(string: url) else { return nil }
+      return url.queryItems?.first(where: { $0.name == param })?.value
+    }
 }
 
 extension ThreeDsViewController : WKNavigationDelegate {
@@ -48,6 +53,7 @@ extension ThreeDsViewController : WKNavigationDelegate {
                 DispatchQueue.main.async {
                     self.dismiss(animated: true, completion: {
                         self.isVerfyCard ? self.delegate?.threeDsVerifyFail(ref: self.merchantRef ?? "") : self.delegate?.threeDsFail()
+                        self.delegate?.closeTransactionById(Id: self.getQueryStringParameter(url: urlStr, param: "cko-session-id") ?? "")
                     })
                 }
             }

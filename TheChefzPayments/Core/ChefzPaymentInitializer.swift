@@ -48,7 +48,7 @@ public class ChefzPaymentInitializer  {
         }
     }
     
-    public func verifyCard(cardNumber: String , exipyMonth: String , expiryYear : String , cvv: String , cardHolderName: String , merchantReference: String , isDefault: Bool) {
+    public func verifyCard(cardNumber: String , exipyMonth: String , expiryYear : String , cvv: String , cardHolderName: String , isDefault: Bool) {
         
         CheckoutHelper.getCardToken(cardNumber: cardNumber, exipyMonth: exipyMonth, expiryYear: expiryYear, cvv: cvv, cardHolderName: cardHolderName, environment: PaymentConstants.environment ) { [weak self]  success, token, bin, error  in
             if success == false {
@@ -115,6 +115,11 @@ extension ChefzPaymentInitializer: ChefzPayment {
 }
 
 extension ChefzPaymentInitializer: ThreeDsResult {
+    
+    func closeTransactionById(Id: String) {
+        presenter.closeTransactionById(id: Id)
+    }
+    
     
     func threeDsVerifySuccess(ref: String) {
         debugPrint(ref)

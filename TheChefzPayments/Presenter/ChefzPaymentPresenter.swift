@@ -78,4 +78,14 @@ class ChefzPaymentPresenter {
         }
     }
     
+    func closeTransactionById(id: String) {
+        PaymentService.closeTransaction(id: id) { [weak self] success , errorMessage in
+            if success == true {
+               debugPrint("success")
+            } else {
+               debugPrint("fail")
+            }
+        }
+    }
+    
 }

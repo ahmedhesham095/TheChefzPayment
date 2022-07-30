@@ -32,6 +32,7 @@ class PaymentConstants {
     
     enum PaymentEndPoints: String {
         case payNewCard = "/payment/checkout/payments"
+        case closeTransaction = "/payment/checkout/close-transaction-by-id"
     }
     
    static func setUserToken(token: String) {
