@@ -115,7 +115,7 @@ class PaymentService {
         }
     }
     
-    static func closeTransaction(id: String , callback:@escaping (Bool,String) -> Void) {
+    static func closeTransaction(id: String , callback:@escaping (String) -> Void) {
         
         let provider = MoyaProvider<PaymentAPI>(plugins: [NetworkLoggerPlugin()])
         
@@ -123,17 +123,18 @@ class PaymentService {
             switch result {
             case let .success(response):
                 do {
-                    let result = Mapper<PaymentResult>().map(JSON:try response.mapJSON() as! [String : Any])
-                    if result?.success ?? false {
-                        callback(true , "")
+                    if let json = try response.mapJSON() as? [String : Any] {
+                        if let dict = json["data"] as? String {
+                            callback(dict)
+                        }
                     } else {
-                        callback(false , result?.status_message ?? "")
+                        callback("")
                     }
                 } catch {
-                    callback(false , "")
+                    callback("Internal Server Error")
                 }
             case .failure(_):
-                callback(false , "")
+                callback("No Internet Connection")
             }
         }
     }

@@ -12,7 +12,6 @@ protocol ChefzPayment {
     func didFailPayment(with message: String)
     func willPayWith3DS(link: String)
     func didSuccessWithRef(ref: String)
-    func didFailWithRef(ref: String)
     func willVerifyWith3DS(link: String , ref: String)
 }
 
@@ -49,7 +48,7 @@ class ChefzPaymentPresenter {
                     self?.delegate?.didSuccessWithRef(ref: merchantRef)
                 }
             } else {
-                self?.delegate?.didFailWithRef(ref: merchantRef)
+                self?.delegate?.didFailPayment(with: errorMessage)
             }
         }
     }
@@ -79,13 +78,8 @@ class ChefzPaymentPresenter {
     }
     
     func closeTransactionById(id: String) {
-        PaymentService.closeTransaction(id: id) { [weak self] success , errorMessage in
-            if success == true {
-               debugPrint("success")
-            } else {
-               debugPrint("fail")
-            }
+        PaymentService.closeTransaction(id: id) { [weak self] errorMessage in
+            self?.delegate?.didFailPayment(with: errorMessage)
         }
     }
-    
 }

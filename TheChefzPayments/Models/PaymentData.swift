@@ -12,6 +12,7 @@ class PaymentData : NSObject, NSCoding, Mappable{
     
     var threedsUrl : String?
     var merchant_reference: Int?
+    var message: String?
     
     class func newInstance(map: Map) -> Mappable?{
         return PaymentData()
@@ -23,6 +24,7 @@ class PaymentData : NSObject, NSCoding, Mappable{
     {
         threedsUrl <- map["3ds_url"]
         merchant_reference <- map["merchant_reference"]
+        message <- map["message"]
     }
     
     /**

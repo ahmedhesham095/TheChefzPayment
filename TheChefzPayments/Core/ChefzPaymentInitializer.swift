@@ -71,11 +71,6 @@ public class ChefzPaymentInitializer  {
 
 extension ChefzPaymentInitializer: ChefzPayment {
     
-    func didFailWithRef(ref: String) {
-        delegate?.didVerifyFail(ref: ref)
-    }
-    
-    
     func didSuccessWithRef(ref: String) {
         delegate?.didVerifySucess(ref: ref)
     }
@@ -126,19 +121,10 @@ extension ChefzPaymentInitializer: ThreeDsResult {
         delegate?.didVerifySucess(ref: ref)
     }
     
-    func threeDsVerifyFail(ref: String) {
-        debugPrint(ref)
-        delegate?.didVerifyFail(ref: ref)
-    }
-    
     func threeDsSuccess() {
         debugPrint("3dsSuccess")
         delegate?.didSucess()
     }
     
-    func threeDsFail() {
-        debugPrint("3dsFail")
-        delegate?.didFail(with: "")
-    }
 }
 

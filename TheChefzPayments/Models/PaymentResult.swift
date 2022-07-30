@@ -14,6 +14,7 @@ class PaymentResult : NSObject, NSCoding, Mappable{
     var data : PaymentData?
     var success : Bool?
     var status_message: String?
+    var message: String?
 
     class func newInstance(map: Map) -> Mappable?{
         return PaymentResult()
@@ -26,6 +27,7 @@ class PaymentResult : NSObject, NSCoding, Mappable{
         data <- map["data"]
         success <- map["success"]
         status_message <- map["status_message"]
+        message <- map["message"]
     }
 
     /**

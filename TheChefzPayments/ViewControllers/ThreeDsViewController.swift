@@ -10,9 +10,7 @@ import WebKit
 
 protocol ThreeDsResult {
     func threeDsSuccess()
-    func threeDsFail()
     func threeDsVerifySuccess(ref: String)
-    func threeDsVerifyFail(ref: String)
     func closeTransactionById(Id: String)
 }
 
@@ -52,7 +50,6 @@ extension ThreeDsViewController : WKNavigationDelegate {
             if urlStr.contains("payment/failed") {
                 DispatchQueue.main.async {
                     self.dismiss(animated: true, completion: {
-                        self.isVerfyCard ? self.delegate?.threeDsVerifyFail(ref: self.merchantRef ?? "") : self.delegate?.threeDsFail()
                         self.delegate?.closeTransactionById(Id: self.getQueryStringParameter(url: urlStr, param: "cko-session-id") ?? "")
                     })
                 }
