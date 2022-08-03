@@ -17,6 +17,7 @@ protocol ThreeDsResult {
 class ThreeDsViewController: UIViewController {
     
     @IBOutlet weak var webView: WKWebView!
+    @IBOutlet weak var chefzLogo: UIImageView!
     var threeDsURL: String?
     var delegate: ThreeDsResult?
     var isVerfyCard = false
@@ -28,6 +29,9 @@ class ThreeDsViewController: UIViewController {
             webView.load(URLRequest(url: url))
         }
         webView.navigationDelegate = self
+        if let image = UIImage(named: "ic_chefz_logo", in:Bundle(for:ThreeDsViewController.self), compatibleWith: nil) {
+            chefzLogo.image = image
+        }
     }
 
     func getQueryStringParameter(url: String, param: String) -> String? {
