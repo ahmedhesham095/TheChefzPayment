@@ -10,7 +10,7 @@ import UIKit
 class ChefzPaymentViewController: UIViewController {
     
     private lazy var initializer: ChefzPaymentInitializer = {
-        return ChefzPaymentInitializer(language: .ar, environment: .sandBox, userToken: "D7S5KRMVO7ftPFX59T3QeltGpbjOA0_Yyxq35elx", delegate: self, viewController: self)
+        return ChefzPaymentInitializer(language: .ar, environment: .sandBox, userToken: "", delegate: self, viewController: self)
     }()
     
     override func viewDidLoad() {

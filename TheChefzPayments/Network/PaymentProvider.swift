@@ -66,7 +66,7 @@ extension PaymentAPI: TargetType {
                 "token": token
             ]
             
-            return .requestParameters(parameters: ["source": source , "reference": refrence , "cvv": cvv , "is_default": isDefault , "bin" : bin], encoding:  JSONEncoding.default)
+            return .requestParameters(parameters: ["source": source , "reference": refrence , "cvv": cvv , "is_default": isDefault , "bin" : bin , "payment_gateway":"checkout"], encoding:  JSONEncoding.default)
             
         case .verifyCard(token: let token, cvv: let cvv, isDefault: let isDefault):
             let source: [String : Any] =  [
@@ -74,14 +74,14 @@ extension PaymentAPI: TargetType {
                 "token": token
             ]
             
-            return .requestParameters(parameters: ["source": source , "cvv": cvv , "is_default": isDefault ,  "verifyCard": true], encoding:  JSONEncoding.default)
+            return .requestParameters(parameters: ["source": source , "cvv": cvv , "is_default": isDefault ,  "verifyCard": true ,  "payment_gateway":"checkout"], encoding:  JSONEncoding.default)
             
         case .payCardId(cardId: let cardId, refrence: let refrence):
             let source: [String : Any] =  [
                 "type": "card_id",
                 "card_id": cardId
             ]
-            return .requestParameters(parameters: ["source": source , "reference": refrence], encoding:  JSONEncoding.default)
+            return .requestParameters(parameters: ["source": source , "reference": refrence , "payment_gateway":"checkout"], encoding:  JSONEncoding.default)
             
         case .payApplePay(let token,let refrence):
             let source: [String : Any] =  [
@@ -89,7 +89,7 @@ extension PaymentAPI: TargetType {
                 "token": token
             ]
             
-            return .requestParameters(parameters: ["source": source , "reference": refrence , "payment_method_type" : "applepay"], encoding:  JSONEncoding.default)
+            return .requestParameters(parameters: ["source": source , "reference": refrence , "payment_method_type" : "applepay" ,  "payment_gateway":"checkout"], encoding:  JSONEncoding.default)
         case .closeTransactionById(id: let id):
             return .requestParameters(parameters: ["id": id], encoding:  URLEncoding.queryString)
         }
