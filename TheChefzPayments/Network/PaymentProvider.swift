@@ -19,12 +19,7 @@ extension PaymentAPI: TargetType {
     
     
     var baseURL: URL {
-        switch PaymentConstants.environment {
-        case .sandBox:
-            return URL(string: PaymentConstants.BASE_STG_URL)!
-        default:
-            return URL(string: PaymentConstants.BASE_PROD_URL)!
-        }
+        return URL(string: PaymentConstants.BASE_URL)!
     }
     
     var path: String {

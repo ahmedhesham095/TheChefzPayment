@@ -21,11 +21,10 @@ public enum Langugage {
 class PaymentConstants {
     
     static let UDK_TOKEN = "User_Token"
-    static let CHECKOUT_PUBLIC_KEY = "pk_test_a8c8e0b6-023b-4402-9704-47d4de12d6e4"
+    static var CHECKOUT_PUBLIC_KEY = ""
     static let CHECKOUT_LIVE_BASEURL = "https://api.checkout.com"
     static let CHECKOUT_SANDBOX_BASEURL = "https://api.sandbox.checkout.com"
-    static let BASE_PROD_URL = "https://api.thechefz.co/v9"
-    static let BASE_STG_URL = "https://api-stg.chefztest.co/v9"
+    static var BASE_URL = ""
     static var environment: Environment = .production
     static var langugae: Langugage? = .en
     

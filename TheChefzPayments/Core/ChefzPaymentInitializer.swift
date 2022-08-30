@@ -29,11 +29,13 @@ public class ChefzPaymentInitializer  {
         return ChefzPaymentPresenter(delegate: self)
     }()
     
-    public init(language: Langugage , environment: Environment , userToken: String , delegate: TheChefzPaymentResult , viewController: UIViewController) {
+    public init(language: Langugage , environment: Environment , userToken: String , delegate: TheChefzPaymentResult , viewController: UIViewController , sdkToken: String , baseUrl: String) {
         self.delegate = delegate
         self.presentingVC = viewController
         PaymentConstants.langugae = language
         PaymentConstants.environment = environment
+        PaymentConstants.CHECKOUT_PUBLIC_KEY = sdkToken
+        PaymentConstants.BASE_URL = baseUrl
         PaymentConstants.setUserToken(token: userToken)
     }
     

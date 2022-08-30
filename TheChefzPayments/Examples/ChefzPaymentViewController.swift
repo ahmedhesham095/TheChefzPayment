@@ -10,7 +10,7 @@ import UIKit
 class ChefzPaymentViewController: UIViewController {
     
     private lazy var initializer: ChefzPaymentInitializer = {
-        return ChefzPaymentInitializer(language: .ar, environment: .sandBox, userToken: "", delegate: self, viewController: self)
+        return ChefzPaymentInitializer(language: .ar, environment: .sandBox, userToken: "D7S5KRMVO7ftPFX59T3QeltGpbjOA0_Yyxq35elx", delegate: self, viewController: self, sdkToken: "pk_test_a8c8e0b6-023b-4402-9704-47d4de12d6e4", baseUrl: "https://api-stg.chefztest.co/v9" )
     }()
     
     override func viewDidLoad() {
