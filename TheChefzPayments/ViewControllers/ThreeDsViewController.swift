@@ -43,7 +43,7 @@ class ThreeDsViewController: UIViewController {
 extension ThreeDsViewController : WKNavigationDelegate {
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         if let urlStr = navigationAction.request.url?.absoluteString {
-            if urlStr.contains("payment/success") {
+            if urlStr.contains("payment/checkout/success") {
                 DispatchQueue.main.async {
                     self.dismiss(animated: true, completion: {
                         self.isVerfyCard ? self.delegate?.threeDsVerifySuccess(ref: self.merchantRef ?? "") : self.delegate?.threeDsSuccess()
@@ -51,7 +51,7 @@ extension ThreeDsViewController : WKNavigationDelegate {
                 }
             }
             
-            if urlStr.contains("payment/failed") {
+            if urlStr.contains("payment/checkout/failed") {
                 DispatchQueue.main.async {
                     self.dismiss(animated: true, completion: {
                         self.delegate?.closeTransactionById(Id: self.getQueryStringParameter(url: urlStr, param: "cko-session-id") ?? "")
