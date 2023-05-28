@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "TheChefzPayments"
-  spec.version      = "1.1.9"
+  spec.version      = "1.2.0"
   spec.summary      = "An iOS Repository for TheChefz Payments written in Swift"
 
   # This description is used to generate tags and improve search results.
