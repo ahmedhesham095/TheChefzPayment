@@ -8,7 +8,7 @@ target 'TheChefzPayments' do
   # Pods for TheChefzPayments
   pod 'Moya'
   pod 'ObjectMapper'
-  pod 'Frames'
+  pod 'Frames' , '~> 3.5.0'
   pod 'NVActivityIndicatorView'
 
 post_install do |installer|
