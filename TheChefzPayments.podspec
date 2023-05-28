@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "TheChefzPayments"
-  spec.version      = "1.1.2"
+  spec.version      = "1.1.9"
   spec.summary      = "An iOS Repository for TheChefz Payments written in Swift"
 
   # This description is used to generate tags and improve search results.
@@ -100,8 +100,7 @@ Pod::Spec.new do |spec|
   #
 
   # spec.resource  = "icon.png"
-    spec.resources = "TheChefzPayments/**/*.{xib}"
-
+    spec.resources = "TheChefzPayments/**/*.{xib,xcassets}"
   # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
 
@@ -131,4 +130,5 @@ Pod::Spec.new do |spec|
     spec.dependency "ObjectMapper"
     spec.dependency "Frames"
     spec.dependency "NVActivityIndicatorView"
+
 end
