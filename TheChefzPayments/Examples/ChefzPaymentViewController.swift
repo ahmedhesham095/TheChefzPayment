@@ -10,15 +10,15 @@ import UIKit
 class ChefzPaymentViewController: UIViewController {
     
     private lazy var initializer: ChefzPaymentInitializer = {
-        return ChefzPaymentInitializer(language: .ar, environment: .sandBox, userToken: "D7S5KRMVO7ftPFX59T3QeltGpbjOA0_Yyxq35elx", delegate: self, viewController: self, sdkToken: "pk_test_a8c8e0b6-023b-4402-9704-47d4de12d6e4", baseUrl: "https://api-stg.chefztest.co/v9" )
+        return ChefzPaymentInitializer(language: .ar, environment: .sandBox, userToken: "D7S5KRMVO7ftPFX59T3QeltGpbjOA0_Yyxq35elx", delegate: self, viewController: self, sdkToken: "pk_sbox_yr3lr2kh266cdiavzjsqdpp7l4e", baseUrl: "https://api-stg.chefztest.co/v9", paymentGateway: 4 )
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-//        initializer.payWithNewCardCard(cardNumber: "4543474002249996", exipyMonth: "01", expiryYear: "29", cvv: "956", cardHolderName: "test", merchantReference: "8361792", isDefault: true)
+        initializer.payWithNewCardCard(cardNumber: "4543474002249996", exipyMonth: "01", expiryYear: "29", cvv: "956", cardHolderName: "test", merchantReference: "8368824", isDefault: true)
         
-        initializer.verifyCard(cardNumber: "4242424242424242", exipyMonth: "01", expiryYear: "29", cvv: "956", cardHolderName: "test", isDefault: true)
+  //      initializer.verifyCard(cardNumber: "4242424242424242", exipyMonth: "01", expiryYear: "29", cvv: "956", cardHolderName: "test", isDefault: true)
 //        initializer.paySavedCard(cardId: "403480", merchantReference: "8361800")
     }
     

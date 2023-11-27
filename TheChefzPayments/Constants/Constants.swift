@@ -27,11 +27,11 @@ class PaymentConstants {
     static var BASE_URL = ""
     static var environment: Environment = .production
     static var langugae: Langugage? = .en
-    
+    static var paymentGateWay = 0
     
     enum PaymentEndPoints: String {
-        case payNewCard = "/payment/checkout/payments"
-        case closeTransaction = "/payment/checkout/close-transaction-by-id"
+        case payNewCard = "/payment/checkoutv2/payments"
+        case closeTransaction = "/payment/checkoutv2/close-transaction-by-id"
     }
     
    static func setUserToken(token: String) {

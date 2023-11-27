@@ -29,7 +29,7 @@ public class ChefzPaymentInitializer  {
         return ChefzPaymentPresenter(delegate: self)
     }()
     
-    public init(language: Langugage , environment: Environment , userToken: String , delegate: TheChefzPaymentResult , viewController: UIViewController , sdkToken: String , baseUrl: String) {
+    public init(language: Langugage , environment: Environment , userToken: String , delegate: TheChefzPaymentResult , viewController: UIViewController , sdkToken: String , baseUrl: String , paymentGateway: Int) {
         self.delegate = delegate
         self.presentingVC = viewController
         PaymentConstants.langugae = language
@@ -37,6 +37,7 @@ public class ChefzPaymentInitializer  {
         PaymentConstants.CHECKOUT_PUBLIC_KEY = sdkToken
         PaymentConstants.BASE_URL = baseUrl
         PaymentConstants.setUserToken(token: userToken)
+        PaymentConstants.paymentGateWay = paymentGateway
     }
     
     public func payWithNewCardCard(cardNumber: String , exipyMonth: String , expiryYear : String , cvv: String , cardHolderName: String , merchantReference: String , isDefault: Bool) {
