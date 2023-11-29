@@ -7,7 +7,7 @@ target 'TheChefzPayments' do
   source 'https://github.com/CocoaPods/Specs.git'
   
   # Pods for TheChefzPayments
-  pod 'Moya'
+  pod 'Moya' , '~> 12.0'
   pod 'ObjectMapper'
   pod 'Frames', '~> 3.5.0'
   pod 'NVActivityIndicatorView'
@@ -15,14 +15,12 @@ target 'TheChefzPayments' do
 post_install do |installer|
     installer.pods_project.build_configurations.each do |config|
         config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
-        config.build_settings['ENABLE_BITCODE'] = 'YES'
-        config.build_settings["DEVELOPMENT_TEAM"] = "MEZL3QN42T"
+        config.build_settings['CODE_SIGNING_ALLOWED'] = 'NO'
     end
     installer.pods_project.targets.each do |target|
         target.build_configurations.each do |config|
             config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
-            config.build_settings['ENABLE_BITCODE'] = 'YES'
-            config.build_settings["DEVELOPMENT_TEAM"] = "MEZL3QN42T"
+            config.build_settings['CODE_SIGNING_ALLOWED'] = 'NO'
         end
     end
 end
